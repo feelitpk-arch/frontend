@@ -79,7 +79,7 @@ export default function CategoryPage() {
 
   const shouldIncludeProduct = (product: Product): boolean => {
     if (slug === "best-sellers") {
-      return product.isBestSeller;
+      return product.isBestSeller === true;
     }
     return product.category === slug;
   };
