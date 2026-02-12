@@ -19,7 +19,7 @@ export function usePublicWebSocket() {
   const handlersRef = useRef<Map<WebSocketEvent, Set<EventHandler>>>(new Map());
 
   useEffect(() => {
-    const socket = io(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001"}/public`, {
+    const socket = io(`${(process.env.NEXT_PUBLIC_API_URL || "https://backend-0d7p.onrender.com/api").replace(/\/api\/?$/, "")}/public`, {
       transports: ["websocket", "polling"],
     });
 

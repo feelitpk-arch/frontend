@@ -26,7 +26,7 @@ export function useWebSocket(token: string | null) {
       return;
     }
 
-    const socket = io(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001"}/admin`, {
+    const socket = io(`${(process.env.NEXT_PUBLIC_API_URL || "https://backend-0d7p.onrender.com/api").replace(/\/api\/?$/, "")}/admin`, {
       auth: {
         token,
       },
