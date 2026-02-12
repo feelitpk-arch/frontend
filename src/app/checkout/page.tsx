@@ -8,23 +8,8 @@ import { useCart } from "@/context/CartContext";
 import { ProductCard } from "@/components/ProductCard";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
 import { api } from "@/lib/api";
+import type { Product } from "@/data/products";
 import toast from "react-hot-toast";
-
-type Product = {
-  id: string;
-  slug: string;
-  name: string;
-  description: string;
-  notes?: string;
-  price: number;
-  sizes: number[];
-  defaultSize: number;
-  category: string;
-  isBestSeller: boolean;
-  isNewArrival: boolean;
-  image: string;
-  gallery?: string[];
-};
 
 export default function CheckoutPage() {
   const router = useRouter();

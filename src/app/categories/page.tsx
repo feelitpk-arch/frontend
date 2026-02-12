@@ -6,24 +6,9 @@ import { motion } from "framer-motion";
 import { ProductCard } from "@/components/ProductCard";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
 import { api } from "@/lib/api";
+import type { Product } from "@/data/products";
 
 type TabType = "new-arrivals" | "men" | "women";
-
-type Product = {
-  id: string;
-  slug: string;
-  name: string;
-  description: string;
-  notes?: string;
-  price: number;
-  sizes: number[];
-  defaultSize: number;
-  category: string;
-  isBestSeller: boolean;
-  isNewArrival: boolean;
-  image: string;
-  gallery?: string[];
-};
 
 const tabs: { id: TabType; label: string; href: string }[] = [
   { id: "new-arrivals", label: "New Arrivals", href: "/category/new-arrivals" },

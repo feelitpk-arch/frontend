@@ -4,22 +4,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { ProductDetailClient } from "@/components/ProductDetailClient";
 import { api } from "@/lib/api";
-
-type Product = {
-  id: string;
-  slug: string;
-  name: string;
-  description: string;
-  notes?: string;
-  price: number;
-  sizes: number[];
-  defaultSize: number;
-  category: string;
-  isBestSeller: boolean;
-  isNewArrival: boolean;
-  image: string;
-  gallery?: string[];
-};
+import type { Product } from "@/data/products";
 
 export default function ProductPage() {
   const params = useParams();

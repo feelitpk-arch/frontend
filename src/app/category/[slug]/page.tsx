@@ -5,33 +5,7 @@ import { useParams } from "next/navigation";
 import { ProductCard } from "@/components/ProductCard";
 import { api } from "@/lib/api";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
-
-type ProductCategory =
-  | "best-sellers"
-  | "weekly-deals"
-  | "testers"
-  | "explorer-kits"
-  | "men"
-  | "women"
-  | "new-arrivals"
-  | "colognes"
-  | "roll-ons";
-
-type Product = {
-  id: string;
-  slug: string;
-  name: string;
-  description: string;
-  notes?: string;
-  price: number;
-  sizes: number[];
-  defaultSize: number;
-  category: string;
-  isBestSeller: boolean;
-  isNewArrival: boolean;
-  image: string;
-  gallery?: string[];
-};
+import type { Product, ProductCategory } from "@/data/products";
 
 const categoryLabels: Record<ProductCategory, string> = {
   "best-sellers": "Best Sellers",
