@@ -280,8 +280,9 @@ export default function AdminProductsPage() {
           setProductToDelete(null);
         }}
         onConfirm={handleDeleteConfirm}
+        title="Delete product?"
+        message="This product will be removed. This action cannot be undone."
         itemName={productToDelete?.name || ""}
-        itemType="product"
       />
     </div>
   );
