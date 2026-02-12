@@ -72,7 +72,7 @@ export default function AdminAnalyticsPage() {
   const handleExportPDF = async () => {
     try {
       const { exportToPDF } = await import("@/utils/reportExport");
-      exportToPDF(reportData, reportPeriod);
+      exportToPDF(reportData);
     } catch (err) {
       console.error("Failed to export PDF:", err);
     }
@@ -81,7 +81,7 @@ export default function AdminAnalyticsPage() {
   const handleExportExcel = async () => {
     try {
       const { exportToExcel } = await import("@/utils/reportExport");
-      exportToExcel(reportData, reportPeriod);
+      exportToExcel(reportData);
     } catch (err) {
       console.error("Failed to export Excel:", err);
     }
