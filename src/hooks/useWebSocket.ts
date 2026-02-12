@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { io, Socket } from "socket.io-client";
 
-type WebSocketEvent =
+export type WebSocketEvent =
   | "new-order"
   | "order-status-changed"
   | "product-created"

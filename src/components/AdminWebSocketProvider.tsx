@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
 import { useWebSocket } from "@/hooks/useWebSocket";
+import type { WebSocketEvent } from "@/hooks/useWebSocket";
 
 type Notification = {
   id: string;
@@ -17,7 +18,7 @@ type WebSocketContextType = {
   notifications: Notification[];
   clearNotifications: () => void;
   removeNotification: (id: string) => void;
-  on: (event: string, handler: (data: any) => void) => () => void;
+  on: (event: WebSocketEvent, handler: (data: any) => void) => () => void;
 };
 
 const WebSocketContext = createContext<WebSocketContextType | undefined>(
