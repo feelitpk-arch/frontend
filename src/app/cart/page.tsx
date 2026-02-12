@@ -8,22 +8,7 @@ import { useCart } from "@/context/CartContext";
 import { ProductCard } from "@/components/ProductCard";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
 import { api } from "@/lib/api";
-
-type Product = {
-  id: string;
-  slug: string;
-  name: string;
-  description: string;
-  notes?: string;
-  price: number;
-  sizes: number[];
-  defaultSize: number;
-  category: string;
-  isBestSeller: boolean;
-  isNewArrival: boolean;
-  image: string;
-  gallery?: string[];
-};
+import type { Product } from "@/data/products";
 
 export default function CartPage() {
   const router = useRouter();
