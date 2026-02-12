@@ -252,13 +252,15 @@ export default function AdminCategoriesPage() {
           setCategoryToDelete(null);
         }}
         onConfirm={handleDeleteConfirm}
+        title="Delete category?"
+        message="This category will be removed. This action cannot be undone."
         itemName={categoryToDelete?.label || ""}
-        itemType="category"
       />
 
       <WarningModal
         isOpen={warningModalOpen}
         onClose={() => setWarningModalOpen(false)}
+        title="Cannot delete"
         message={warningMessage}
       />
     </div>
