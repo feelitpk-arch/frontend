@@ -201,12 +201,14 @@ export function ProductDetailClient({ product }: Props) {
           transition={{ delay: 0.5 }}
           className="space-y-4 rounded-2xl border border-neutral-200 bg-neutral-50 p-6"
         >
-          <div>
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-neutral-700">
-              Fragrance Notes
-            </p>
-            <p className="text-sm leading-relaxed text-neutral-700">{product.notes}</p>
-          </div>
+          {product.notes && (
+            <div>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-neutral-700">
+                Fragrance Notes
+              </p>
+              <p className="text-sm leading-relaxed text-neutral-700">{product.notes}</p>
+            </div>
+          )}
         </motion.div>
 
         <motion.div

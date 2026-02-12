@@ -57,7 +57,7 @@ export default function ProductModal({
       setFormData({
         name: product.name,
         description: product.description,
-        notes: product.notes,
+        notes: product.notes ?? "",
         price: product.price.toString(),
         sizes: product.sizes.join(", "),
         defaultSize: product.defaultSize.toString(),

@@ -14,7 +14,7 @@ export type Product = {
   slug: string;
   name: string;
   description: string;
-  notes: string;
+  notes?: string;
   price: number;
   sizes: number[];
   defaultSize: number;
